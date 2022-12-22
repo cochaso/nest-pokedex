@@ -22,9 +22,9 @@ export class SeedService {
     await this.PokemonModel.deleteMany({});
 
     // const {data} = await this.axios.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=650');
-    const data = await this.http.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=10');
+    const data = await this.http.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=50');
 
-    console.log(data);
+    // console.log(data);
     const pokemonToInst: {name:string, no:number}[] = [];
     // const insPromArray = [];
 
